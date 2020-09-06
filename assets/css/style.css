@@ -1,0 +1,133 @@
+html {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    background-color: #202327;
+}
+
+a.abtn {
+    cursor: pointer;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.perk-display {
+    position: relative;
+    display: flex;
+    width: 640px;
+    height: 640px;
+    align-self: center;
+}
+
+.perk-slot {
+    position: absolute;
+}
+
+.perk-slot {
+    z-index: 2;
+}
+
+.slot1 {
+    top: 192px;
+    left: 384px;
+}
+
+.slot2 {
+    top: 384px;
+    left: 192px;
+}
+
+.slot3 {
+    top: 192px;
+    left: 0px;
+}
+
+.slot4 {
+    top: 0px;
+    left: 192px;
+}
+
+.next-rand {
+    display: flex;
+    align-self: flex-end;
+}
+
+.perkset {
+    margin-bottom: 30px;
+}
+
+.perkblock {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#perkpool-body {
+    border-radius: 1rem;
+    margin: 0 10px;
+}
+
+img.perk {
+    height: 128px;
+    width: 128px;
+    cursor: pointer;
+}
+
+.perkset-title {
+    text-align: center;
+    color: white;
+}
+
+.hr-dark {
+    border-color: rgba(255, 255, 255, .7);
+}
+
+.invalid-perk {
+    filter: opacity(25%);
+}
+
+#lang-body {
+    text-align: center;
+}
+
+.selected-lang {
+    font-weight: bold;
+    background-color: #343a40 !important;
+    color: white !important;
+    border-radius: .7rem;
+}
+
+a:not([href]):not(.abtn) {
+    cursor: default;
+}
+
+.perkset-title {
+    text-align: center;
+}
+
+hr.perksetsplit {
+    margin: 0;
+}
+
+.misc-block {
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: smaller;
+}
+
+.center {
+    margin: 0 auto;
+    width: fit-content;
+}
