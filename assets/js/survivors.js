@@ -52,7 +52,7 @@
     }
 
     function getTeachablePerks() {
-        fetch('/assets/perks/survivors/teachable.json').then(res => {
+        fetch('/DBDRandomPerks/assets/perks/survivors/teachable.json').then(res => {
             res.json().then(json => {
                 teachables = json
             }).then(getGeneralPerks)
@@ -60,7 +60,7 @@
     }
 
     function getGeneralPerks() {
-        fetch('/assets/perks/survivors/general.json').then(res => {
+        fetch('/DBDRandomPerks/assets/perks/survivors/general.json').then(res => {
             res.json().then(json => {
                 generals = json
             }).then(getLanguages)
@@ -68,15 +68,15 @@
     }
 
     function getLanguages() {
-        fetch('/assets/lang/index.json').then(res => {
+        fetch('/DBDRandomPerks/assets/lang/index.json').then(res => {
             res.json().then(json => {
                 lang_map = json
             }).then(() => {
-                fetch('/assets/lang/' + lang + '.json').then(res => {
+                fetch('/DBDRandomPerks/assets/lang/' + lang + '.json').then(res => {
                     res.json().then(json => {
                         translation = json
                     }).then(() => {
-                        fetch('/assets/lang/en.json').then(res => {
+                        fetch('/DBDRandomPerks/assets/lang/en.json').then(res => {
                             res.json().then(json => {
                                 translation_default = json
                             }).then(postInit)
@@ -186,7 +186,7 @@
                     sp = true
                 }
                 let img = $('<img>')
-                img.attr('src', '/assets/icons/survivors/' + EXH_PERKS[exh] + '.png')
+                img.attr('src', '/DBDRandomPerks/assets/icons/survivors/' + EXH_PERKS[exh] + '.png')
                 img.attr('data-toggle', "tooltip")
                 img.attr('data-placement', "top")
                 img.attr('title', getTranslatedText(EXH_PERKS[exh]))
@@ -211,7 +211,7 @@
                 }
             }
             let img = $('<img>')
-            img.attr('src', '/assets/icons/survivors/' + perks[rnd] + '.png')
+            img.attr('src', '/DBDRandomPerks/assets/icons/survivors/' + perks[rnd] + '.png')
             img.attr('data-toggle', "tooltip")
             img.attr('data-placement', "top")
             img.attr('title', getTranslatedText(perks[rnd]))
@@ -245,7 +245,7 @@
         for (let i = 0; i < perks.length; i++) {
             let img = $('<img>')
             img.addClass('perk')
-            img.attr('src', '/assets/icons/survivors/' + perks[i] + '.png')
+            img.attr('src', '/DBDRandomPerks/assets/icons/survivors/' + perks[i] + '.png')
             img.attr('id', perks[i])
             img.click(evt => {
                 var id = evt.target.id
