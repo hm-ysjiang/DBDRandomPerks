@@ -173,6 +173,9 @@
             localStorage.clear()
             location.reload()
         })
+
+        resizePerkDisplay()
+        window.onresize = resizePerkDisplay
     }
 
     function selectPerks(amount, perks) {
@@ -306,6 +309,19 @@
         $('.trans-splock-sub').text(getTranslatedText('splock-sub'))
         $('.trans-clearsetting').text(getTranslatedText('clearsetting'))
         $('.trans-clearsetting-btn').text(getTranslatedText('clearsetting-btn'))
+    }
+
+    function resizePerkDisplay() {
+        let width = Math.min(innerWidth, screen.width)
+        if (width < 640) {
+            $('.wrapper').css('transform', 'scale(' + (width / 640) + ')')
+            $('#btn-rand').css('transform', 'scale(' + (640 / width) + ')')
+        }
+        else {
+            $('.wrapper').css('transform', '')
+            $('#btn-rand').css('transform', '')
+        }
+        $('body').height(innerHeight)
     }
 
     preInit()

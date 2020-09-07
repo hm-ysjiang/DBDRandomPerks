@@ -9,6 +9,10 @@ body {
     background-color: #202327;
 }
 
+.navbar-brand-sm {
+    font-size: 1rem;
+}
+
 a.abtn {
     cursor: pointer;
 }
@@ -16,9 +20,11 @@ a.abtn {
 .wrapper {
     margin: 0 auto;
     width: fit-content;
+    max-width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-flow: column;
+    transform-origin: top center;
 }
 
 .perk-display {
